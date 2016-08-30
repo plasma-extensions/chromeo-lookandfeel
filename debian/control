@@ -1,0 +1,14 @@
+Source: lnf-theme-chromeo
+Section: unknown
+Priority: optional
+Maintainer: Rohan Garg <rohan@kde.org>
+Build-Depends: debhelper (>=9), cmake, plasma-framework-dev, extra-cmake-modules,
+Standards-Version: 3.9.8
+Homepage: https://github.com/ds9-artwork/lnf-theme-chromeo
+
+Package: lnf-theme-chromeo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: chromeo look-and-feel for plasma
+ This package contains the chromeo look-and-feel theme
+ for Plasma.
