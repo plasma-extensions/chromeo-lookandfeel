@@ -9,9 +9,9 @@ Animation=0
 
 
 [Layout]
-BorderLeft=6
-BorderRight=6
-BorderBottom=6
+BorderLeft=4
+BorderRight=4
+BorderBottom=4
 TitleEdgeTop=0
 TitleEdgeBottom=2
 TitleEdgeLeft=0
