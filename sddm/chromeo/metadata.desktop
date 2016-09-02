@@ -1,12 +1,14 @@
 [SddmGreeterTheme]
 Name=Chromeo
 Description=Chromeo SDDM Theme
-Screenshot=
+Author=Uri Herrera
 License=CC-BY-SA
 Type=sddm-theme
-Version=1.0
+Version=0.1
+Website=https://github.com/plasma-extensions/chromeo-lookandfeel
+Screenshot=screenshot.png
 MainScript=Main.qml
 ConfigFile=theme.conf
 TranslationsDirectory=translations
-Theme-Id=chromeo-sddm
+Email=uri_herrera@nitrux.in
 Theme-API=2.0
