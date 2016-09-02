@@ -23,6 +23,7 @@
 ***************************************************************************/
 
 import QtQuick 2.0
+import QtGraphicalEffects 1.0
 import SddmComponents 2.0
 
 import "Components"
@@ -75,8 +76,8 @@ Rectangle {
             ImageButton {
                 id: btnReboot
                 anchors.horizontalCenter: parent.horizontalCenter
-                width: 74
-                source: "reboot.svg"
+                width: 64
+                source: "system-reboot.svg"
 
 //                 visible: sddm.canReboot
 
@@ -87,7 +88,7 @@ Rectangle {
 
             Text {
                 text: "Reboot"
-                color: "#FAFAFA"
+                color: "#424242"
                 anchors.horizontalCenter: parent.horizontalCenter
             }
         }
@@ -100,8 +101,8 @@ Rectangle {
             ImageButton {
                 id: btnPoweroff
                 anchors.horizontalCenter: parent.horizontalCenter
-                width: 74
-                source: "poweroff.svg"
+                width: 64
+                source: "system-shutdown.svg"
 
 //                 visible: sddm.canPowerOff
 
@@ -112,7 +113,7 @@ Rectangle {
 
             Text {
                 text: "Shutdown"
-                color: "#FAFAFA"
+                color: "#424242"
                 anchors.horizontalCenter: parent.horizontalCenter
             }
         }
@@ -129,6 +130,14 @@ Rectangle {
          anchors.centerIn: parent
          anchors.verticalCenterOffset: -100
          spacing: 12
+         
+            Image {
+                id: space1
+                width: 100
+                height: 100
+                fillMode: Image.PreserveAspectFit
+                source: "blank_space.svg"
+            }
 
             Image {
                 id: logo
@@ -136,6 +145,14 @@ Rectangle {
                 height: 128
                 fillMode: Image.PreserveAspectFit
                 source: config.logo
+            }
+            
+            Image {
+                id: space2
+                width: 100
+                height: 32
+                fillMode: Image.PreserveAspectFit
+                source: "blank_space.svg"
             }
 
             TextBox {
@@ -145,22 +162,23 @@ Rectangle {
                 text: userModel.lastUser
                 font.pixelSize: 12
                 radius: 3
-                color: "#263238"
-                borderColor: "#263238"
-                textColor: "#FAFAFA"
+                color: "#F5F5F5"
+                borderColor: "#9E9E9E"
+                textColor: "#263238"
 
                 KeyNavigation.backtab: layoutBox; KeyNavigation.tab: password
                 
                 Text {
                     id: userNotice
                     text: "Username"
-                    color: "#37474F"
+                    color: "#90A4AE"
                     anchors {
                     horizontalCenter: parent.horizontalCenter
                     verticalCenter: parent.verticalCenter
                     }
                     font.pointSize: 9
                 }
+                
             }
 
             PasswordBox {
@@ -169,8 +187,8 @@ Rectangle {
                 height: 36
                 font.pixelSize: 12
                 radius: 3
-                color: "#CFD8DC"
-                borderColor: "#B0BEC5"
+                color: "#F5F5F5"
+                borderColor: "#9E9E9E"
                 textColor: "#263238"
                 focus: true
                 
@@ -218,6 +236,7 @@ Rectangle {
         id: actionBar
         anchors.top: parent.top;
         color: "#1a1a1a"
+        opacity: 0.9
         anchors.horizontalCenter: parent.horizontalCenter
         width: parent.width; height: 34
         visible: primaryScreen
