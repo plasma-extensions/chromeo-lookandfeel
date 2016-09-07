@@ -49,6 +49,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Plasma)
 add_subdirectory(aurorae)
 add_subdirectory(plasma)
 add_subdirectory(wallpapers)
+add_subdirectory(look-and-feel)
 
 # Display featute summary
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
